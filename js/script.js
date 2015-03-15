@@ -5,13 +5,15 @@ var FxSidebarGenerator = {
 		32: "/img/undefined-32.png",
 		64: "/img/undefined-64.png"
 	},
-	dom: {
-		form: $("#sidebar-form"),
-		inputs: {
-			name: $("#sidebar-name"),
-			url: $("#sidebar-url"),
-			workerURL: $("#worker-url"),
-			shareURL: $("#share-url")
+	initDOM: function() {
+		this.dom = {
+			form: $("#sidebar-form"),
+			inputs: {
+				name: $("#sidebar-name"),
+				url: $("#sidebar-url"),
+				workerURL: $("#worker-url"),
+				shareURL: $("#share-url")
+			}
 		}
 	},
 	getJSONData: function() {
@@ -64,6 +66,7 @@ var FxSidebarGenerator = {
 		});
 	},
 	init: function() {
+		this.initDOM();
 		this.dom.form.addEventListener("submit", function() {
 			this.addSidebar(this.getJSONData(), this.dom.form)
 		}.bind(this));
@@ -98,3 +101,7 @@ function readFile(parameters){
 		reader.readAsDataURL(file)
 	}
 }
+
+window.addEventListener("DOMContentLoaded", function() {
+	FxSidebarGenerator.init();
+});
