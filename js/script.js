@@ -1,9 +1,9 @@
 var FxSidebarGenerator = {
 	baseURL: location.href.substring(0, location.href.lastIndexOf('/')),
 	icons: {
-		16: "/img/undefined-16.png",
-		32: "/img/undefined-32.png",
-		64: "/img/undefined-64.png"
+		16: this.baseURL + "/img/undefined-16.png",
+		32: this.baseURL + "/img/undefined-32.png",
+		64: this.baseURL + "/img/undefined-64.png"
 	},
 	initDOM: function() {
 		this.dom = {
