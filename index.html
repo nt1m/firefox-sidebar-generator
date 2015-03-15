@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<title>Firefox sidebar generator</title>
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/script.js"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+<h1>Firefox sidebar generator</h1>
+<form id="sidebar-generator" class="container" action="#">
+	<p><label for="sidebar-name" class="required">Name</label><input type="text" id="sidebar-name" class="input" required></p>
+	<p style="overflow:auto">
+		<label>Icons</label>
+		<span style="float: right;">
+			<label class="file-input" label="Toolbar icon" size="16x16"><input type="file" onchange="FxSidebarGenerator.setIcon(this.files[0],'16',this.parentNode);"/></label>
+			<label class="file-input" size="32x32"><input type="file" onchange="FxSidebarGenerator.setIcon(this.files[0],'32',this.parentNode);"/></label>
+			<label class="file-input" size="64x64"><input type="file" onchange="FxSidebarGenerator.setIcon(this.files[0],'64',this.parentNode);"/></label>
+		</span>
+	</p>
+	<p><label for="sidebar-url" class="required">Sidebar URL</label><input type="text" id="sidebar-url" class="input" required></p>
+	<p><label for="share-url">Share URL</label><input type="text" id="share-url" class="input"></p>
+	<p><label for="worker-url">Worker URL (See documentation on <a href="https://developer.mozilla.org/en/docs/Social_API">MDN</a>)</label><input type="text" id="worker-url" class="input"> </p>
+	<p><button class="button primary">Add sidebar</button></p>
+</form>
+</body>
+</html>

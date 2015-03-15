@@ -1,0 +1,203 @@
+@import url(http://code.cdn.mozilla.net/fonts/fira.css);
+body {
+	background: #F8F8F8;
+	padding: 0;
+	margin: 0;
+	font-family: "Fira Sans";
+}
+
+a {
+	color: #177EE5;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	color: #FF9500;
+}
+h1 {
+	text-align: center;
+	font-weight: 300;
+}
+.container {
+	max-width: 500px;
+	margin: 0 auto;
+}
+.container .input {
+	float: right;
+}
+.required::after {
+	content: "*";
+	color: #DD4B39;
+	margin-left: 5px;
+	vertical-align: top;
+}
+
+/* Buttons */
+.button {
+	background-color: transparent;
+	border: 0.1em solid transparent;
+	padding: 4px 10px;
+	box-sizing: border-box;
+	height: 30px;
+	vertical-align: top;
+	border-radius: 0.125em;
+	font-size: 14px;
+	font-family: "Fira Sans";
+	transition: all 0.07s;
+	cursor: pointer;
+}
+.button:disabled {
+	opacity: 0.5;
+}
+.button:not(.borderless) {
+	background-color: #EDEDED;
+	border-color: #D1D1D1;
+}
+.button:hover {
+	background-color: #E3E3E3;
+	border-color: #D1D1D1;
+}
+.button:active {
+	background-color: #DDDDDD;
+	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1) inset;
+}
+.button.primary {
+	background-color: #177EE5;
+	color: white;
+	border-color: transparent;
+}
+.button.primary:hover {
+	background-color: #1677D8;
+}
+.button.primary:active {
+	background-color: #1571CE;
+}
+.button.special {
+	background-color: #55D00D;
+	color: white;
+	border-color: transparent;
+}
+.button.special:hover {
+	background-color: #50C40C;
+}
+.button.special:active {
+	background-color: #4CBB0C;
+}
+/* Button group */
+.button-group {
+	clear: both;
+	overflow: auto;
+}
+.button-group > * {
+	margin-left: -1px;
+	float: left;
+}
+.button-group > *:not(:first-child):not(:last-child) {
+	border-radius: 0;
+}
+.button-group > :first-child {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	margin-left: 0;
+}
+.button-group > :last-child {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+/* Inputs */
+.input {
+	box-sizing: border-box;
+	height: 30px;
+	padding: 4px 10px;
+	font-size: 14px;
+	font-family: inherit;
+	border: 0.1em solid #D1D1D1;
+	border-radius: 0.125em;
+	color: #333;
+}
+.input:hover {
+	border-color: #BCBCBC;
+}
+.input:focus {
+	border-color: #177EE5;
+}
+/* File inputs */
+.file-input {
+	border: 2px dashed #CCC;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 3px;
+	height: 64px;
+	width: 64px;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	line-height: 1.5;
+}
+
+.file-input[size="16x16"] {
+	background-size: 16px;
+}
+.file-input[size="32x32"] {
+	background-size: 32px;
+}
+.file-input[size="64x64"] {
+	background-size: 64px;
+	background-position: center 7px !important
+}
+.file-input[selected] {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #E5E5E5;
+}
+
+.file-input[selected]::before, .file-input[selected]:not([size])::after {
+	display: none;
+}
+
+.file-input[selected]::before, .file-input[selected]::after {
+	content: attr(size) !important;
+	font-size: 11pt !important;
+	color: gray;
+	position: absolute !important;
+	bottom: 0 !important;
+	left: 50% !important;
+	-webkit-transform: translate(-50%,0) !important;
+	transform: translate(-50%,0) !important;
+}
+
+.file-input > input[type="file"] {
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.file-input::before, .file-input[size]:not([label])::after {
+	content: attr(label);
+	font-size: 11pt;
+	color: gray;
+}
+
+.file-input[size]:not([label])::after {
+	content: attr(size);
+}
+
+.file-input:not([size])::before,.file-input[size]:not([label])::after {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,50%);
+	transform: translate(-50%,50%)
+}
+
+.file-input[size]::after {
+	content: "("attr(size)")";
+	font-size: 10pt
+}

@@ -1,0 +1,1 @@
+An app to generate Firefox Sidebars.
