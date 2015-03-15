@@ -127,6 +127,7 @@ h1 {
 	border: 2px dashed #CCC;
 	display: inline-block;
 	vertical-align: top;
+	overflow: hidden;
 	border-radius: 3px;
 	height: 64px;
 	width: 64px;
@@ -149,6 +150,7 @@ h1 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: #E5E5E5;
+	overflow: visible;
 	margin-bottom: 30px;
 }
 
