@@ -66,9 +66,11 @@ var FxSidebarGenerator = {
 		});
 	},
 	init: function() {
-		this.initDOM();
 		// Force protocol to https, otherwise install won't work
-		window.location.protocol = "https:";
+		if (location.href.protocol !== "https:" || location.href.protocol !== "file:") {
+			location.href = location.href.replace("http://", "https://");
+		}
+		this.initDOM();
 		this.dom.form.addEventListener("submit", function() {
 			this.addSidebar(this.getJSONData(), this.dom.form)
 		}.bind(this));
