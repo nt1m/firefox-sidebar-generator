@@ -4,6 +4,8 @@ Firefox Sidebar Generator
 # What is this ?
 An app to generate Firefox Sidebars.
 
+Try it here : https://nt1m.github.io/firefox-sidebar-generator
+
 # How does it work ?
 It uses the Firefox Social API
 
