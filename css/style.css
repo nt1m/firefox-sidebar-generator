@@ -3,7 +3,7 @@ body {
 	background: #F8F8F8;
 	padding: 0;
 	margin: 0;
-	font-family: "Fira Sans";
+	font-family: "Fira Sans", Roboto, Arial, sans-serif;
 }
 
 a {
