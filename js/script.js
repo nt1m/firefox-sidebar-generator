@@ -37,6 +37,7 @@ var FxSidebarGenerator = {
 			data.shareURL = this.dom.inputs.shareURL.value;
 		}
 
+		console.log(data)
 		return data;
 	},
 	addSidebar: function(data, node) {
@@ -67,7 +68,7 @@ var FxSidebarGenerator = {
 	},
 	init: function() {
 		// Force protocol to https, otherwise install won't work
-		if (location.href.protocol !== "https:" || location.href.protocol !== "file:") {
+		if (location.protocol !== "https:" && location.protocol !== "file:") {
 			location.href = location.href.replace("http://", "https://");
 		}
 		this.initDOM();
