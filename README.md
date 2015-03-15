@@ -11,6 +11,6 @@ It uses the Firefox Social API
 
 # How to use it ?
 - Make sure you're under the https protocol, otherwise Firefox won't permit installing the sidebar.
-- Make sure you have https://nt1m.github.io/firefox-sidebar-generator in the `social.directories` about:config pref.
+- Make sure you have https://nt1m.github.io in the `social.directories` about:config pref.
 - Fill in the fields
 - Click "Add Sidebar", and you're all set !
